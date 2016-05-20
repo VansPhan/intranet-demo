@@ -1,0 +1,11 @@
+<h1>Demo#index</h1>
+<p>My Index</p>
+
+<% @array.each do |n| %>
+	<%= n %><br/>
+<% end %>
+
+<p>ID: <%= @id %> </p>
+<p>Page: <%= @page %> </p>
+
+<%= link_to("Hello Page", {:action => 'hello'}) %>

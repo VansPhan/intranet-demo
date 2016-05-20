@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1>Big News!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+<%= link_to("Add New Subject", {:action => 'new'}, :class => 'btn btn-default btn-xs') %>
+<table class="table">
+	<% @subjects.each do |subject| %>
+	<tr>
+		<td><%= subject.position %></td>
+		<td class="text-center" style="width: 440px;"><%= subject.name %></td>
+		<td class="actions">
+			<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'btn btn-default btn-xs') %>
+			<%= link_to("Edit", {:action => 'edit', :id => subject.id}, :class => 'btn btn-default btn-xs') %>
+			<%= link_to("Delete", {:action => 'delete', :id => subject.id}, :class => 'btn btn-default btn-xs') %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<footer>
+	<nav>
+	  <ul class="pager">
+	    <li><a href="#">Previous</a></li>
+	    <li><a href="#">Next</a></li>
+	  </ul>
+	</nav>	
+</footer>
+
